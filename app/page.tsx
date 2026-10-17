@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const features = [
   {
     title: "Rápido por diseño",
@@ -43,9 +45,14 @@ export default function Home() {
             <li><a href="#como-funciona" className="hover:text-indigo-500">Cómo funciona</a></li>
             <li><a href="#precios" className="hover:text-indigo-500">Precios</a></li>
           </ul>
-          <a href="#contacto" className="rounded-full bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-500">
-            Empezar
-          </a>
+          <div className="flex items-center gap-3">
+            <Link href="/productos/" className="rounded-full border border-indigo-500/40 px-4 py-2 text-sm font-medium text-indigo-500 hover:bg-indigo-500/10">
+              Productos
+            </Link>
+            <a href="#contacto" className="rounded-full bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-500">
+              Empezar
+            </a>
+          </div>
         </nav>
       </header>
 
